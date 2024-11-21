@@ -1,25 +1,26 @@
-# Walk-With-Me
-IS 436 -  Structured System Analysis and Design
-Deliverable 4 - Data Modeling and Starting Design
-November 20th , 2024
+# Walk With Me
 
-  By: Kabeerah Oshun, Daniel Olumuyiwa, Daniel Bajulaiye, Masaki Maeda, and Femi Knuckles
+## Project Overview
+Walk With Me is a web-based platform designed to provide safety for students who feel unsafe walking around campus. The platform allows users to find a walker who will accompany them, ensuring a safer commuting experience. The service also integrates campus police monitoring to ensure student safety during the walk.
+
+## Technologies
+- Frontend: React.js for dynamic user interfaces. This is the tool used to build the website or web app that the user interacts with (what users will see and click on).
+- Backend: Node.js with Express for the server. This is the server-side part of the platform. It’s what handles user requests, like when someone asks to be matched with a walker, or when data is sent or received from the database.
+- Database: PostgreSQL for storing user data, walker profiles, and walk records. This is the database where user information, walker profiles, and walk details are stored. It's like a big digital notebook where all the important data lives.
+- Authentication: OAuth2.0 and Auth0 for secure user authentication. These are used to securely log users into the platform. It ensures that only valid students/staff members can use the app (i.e., people with a university email).
+- Real-Time Tracking: Google Maps API and Firebase for real-time tracking of walks. Google Maps helps show the walking route, and Firebase helps keep track of users' locations in real-time to make sure they're safe during their walk.
+- Cloud Hosting: AWS (EC2 for hosting, S3 for storage). This is where the platform will be stored and run. AWS will provide the servers and services needed to run the platform.
+- Background Check: Integration with Checkr for walker vetting. This tool will be used to check if the walkers have a clean background, ensuring the safety of the users.
+- Notifications: Firebase Cloud Messaging for push notifications. This will be used to send real-time notifications (for example, when a walker is on the way, or if something goes wrong during a walk).
+
+## Installation
+To set up the project locally:
+
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Set up your `.env` file with necessary API keys.
+4. Run `npm start` to start the application.
 
 
-Team Name- TechTitans
-Contact Person - koshun1@umbc.edu, mmaeda1@umbc.edu 
 
-TEAM MEMBERS
-Kabeerah Oshun (Systems Analyst & quality assurance ) -I will analyze business needs, design solutions, and ensure software quality. I  will gather requirements, create test plans, run tests, and check that the final product meets standards. 
 
-Daniel Olumuyiwa (Back-End Developer) - I will build and manage the server-side logic for the "Walk With Me" platform, ensuring secure data storage for user profiles, reviews, and walk requests in the database. Additionally, I will implement the APIs that allow the front end to communicate with the back end, handling tasks like user authentication, background checks, and real-time route tracking for campus police.
-
-Daniel Bajulaiye(Business analyst) - I will help with analyzing  processes, and recommending solutions to help the team improve efficiency, solve problems, and achieve their goals.
-
-Masaki Maeda (Project Manager) - As the project manager I will ensure that tasks are completed in a timely manner, meeting deadlines and fulfilling the project scope. I will also assist in all tasks that may be at risk of not fulfilling deadlines or meeting the quality standards set for the project, ensuring that any obstacles are addressed promptly and necessary adjustments are made to keep the project within scope. 
-
-Femi Knuckles (Front-End Developer) - (I will help with the development of the graphical user interface of the web-based platform using HTML, CSS, and JavaScript.)
-
-Meeting time:
-Mondays, after lectures.
-Thursdays, 10am.
