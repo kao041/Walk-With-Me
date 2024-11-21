@@ -2,7 +2,7 @@
 Walk With Me is a web-based platform designed to provide safety for students who feel unsafe walking around campus. The platform allows users to find a walker who will accompany them, ensuring a safer commuting experience. The service also integrates campus police monitoring to ensure student safety during the walk.
 
 ## Technologies
-- Frontend: React.js for dynamic user interfaces. This is the tool used to build the website or web app that the user interacts with (what users will see and click on).
+- Frontend:   HTML for dynamic user interfaces. This is the tool used to build the website or web app that the user interacts with (what users will see and click on).
 - Backend: Node.js with Express for the server. This is the server-side part of the platform. It’s what handles user requests, like when someone asks to be matched with a walker, or when data is sent or received from the database.
 - Database: mySQL for storing user data, walker profiles, and walk records. This is the database where user information, walker profiles, and walk details are stored. It's like a big digital notebook where all the important data lives.
 - Authentication: OAuth2.0 and Auth0 for secure user authentication. These are used to securely log users into the platform. It ensures that only valid students/staff members can use the app (i.e., people with a university email).
