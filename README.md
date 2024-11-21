@@ -1,5 +1,3 @@
-# Walk With Me
-
 ## Project Overview
 Walk With Me is a web-based platform designed to provide safety for students who feel unsafe walking around campus. The platform allows users to find a walker who will accompany them, ensuring a safer commuting experience. The service also integrates campus police monitoring to ensure student safety during the walk.
 
@@ -13,14 +11,9 @@ Walk With Me is a web-based platform designed to provide safety for students who
 - Background Check: Integration with Checkr for walker vetting. This tool will be used to check if the walkers have a clean background, ensuring the safety of the users.
 - Notifications: Firebase Cloud Messaging for push notifications. This will be used to send real-time notifications (for example, when a walker is on the way, or if something goes wrong during a walk).
 
-## Installation
-To set up the project locally:
-
-1. Clone the repository.
-2. Run `npm install` to install dependencies.
-3. Set up your `.env` file with necessary API keys.
-4. Run `npm start` to start the application.
-
-
-
+## API Integrations:
+- Google Maps API: Used for real-time tracking of the walking route. The app will connect to Google Maps to display the walker's position and route.
+- Auth0 API: Handles secure authentication for users and walkers. It helps manage logins via OAuth2.0 to ensure user data security.
+- Checkr API: Used to perform background checks on walkers to ensure they are trustworthy and safe.
+- Firebase API: Used for sending notifications and tracking walk data in real-time.
 
