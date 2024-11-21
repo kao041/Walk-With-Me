@@ -1,0 +1,79 @@
+WalkWithMe Database
+
+Create the Users table:
+
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY,
+    user_name VARCHAR2(150),
+    email VARCHAR2(150),
+    phone VARCHAR2(15),
+    password_hash VARCHAR2(225),
+    Rating DECIMAL(2,1) DEFAULT 0
+);
+
+Create the Walker Table:
+
+CREATE TABLE Walker (
+    walker_id INT PRIMARY KEY,
+    walker_name VARCHAR2(150),
+    email VARCHAR2(150),
+    phone VARCHAR2(15),
+    password_hash VARCHAR2(225),
+    rating DECIMAL(2,1) DEFAULT 0
+);
+
+Create the address table:
+
+CREATE TABLE Address (
+    address_id INT PRIMARY KEY,
+    street VARCHAR2(150),
+    city VARCHAR2(150),
+    address_state VARCHAR2(150),
+    postal_code VARCHAR2(15),
+    country VARCHAR(50)
+);
+
+Create the request_status table:
+
+CREATE TABLE Request_Status (
+    status_id INT PRIMARY KEY,
+    status_name VARCHAR2(150)
+);
+
+Create the ratings table:
+
+CREATE TABLE Ratings (
+    rating_id INT PRIMARY KEY,
+    rating_value NUMBER,
+    rating_date DATE,
+    user_id INT,
+    walker_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (walker_id) REFERENCES walker(walker_id)
+);
+
+Create the request table:
+
+ CREATE TABLE Request (
+    request_id INT PRIMARY KEY,
+    user_id INT,
+    walker_id INT,
+    status_id INT,
+    pickup_location VARCHAR2(150),
+    destination_location VARCHAR2(150),
+    request_time TIMESTAMP,
+    walk_start_time TIMESTAMP,
+    walk_end_time TIMESTAMP,
+    FOREIGN KEY(user_id) REFERENCES users(user_id),
+    FOREIGN KEY(walker_id) REFERENCES walker(walker_id),
+    FOREIGN KEY(status_id) REFERENCES request_status(status_id)
+);
+
+Insert Statements:
+
+INSERT INTO users VALUES(1, 'Alice Johnson', 'alice@example,com', '111-222-1234', 'hashed_password_1', '1.5');
+
+INSERT INTO walker VALUES(1, 'Paul George', 'paul@example.com', '333-444-1234', 'hashed_password_2', '6.5');
+
+INSERT INTO address VALUES(1, 'Sunset Drive', 'Jump City', 'California', '12415', 'United States');
+
