@@ -6,7 +6,7 @@ Walk With Me is a web-based platform designed to provide safety for students who
 ## Technologies
 - Frontend: React.js for dynamic user interfaces. This is the tool used to build the website or web app that the user interacts with (what users will see and click on).
 - Backend: Node.js with Express for the server. This is the server-side part of the platform. It’s what handles user requests, like when someone asks to be matched with a walker, or when data is sent or received from the database.
-- Database: PostgreSQL for storing user data, walker profiles, and walk records. This is the database where user information, walker profiles, and walk details are stored. It's like a big digital notebook where all the important data lives.
+- Database: mySQL for storing user data, walker profiles, and walk records. This is the database where user information, walker profiles, and walk details are stored. It's like a big digital notebook where all the important data lives.
 - Authentication: OAuth2.0 and Auth0 for secure user authentication. These are used to securely log users into the platform. It ensures that only valid students/staff members can use the app (i.e., people with a university email).
 - Real-Time Tracking: Google Maps API and Firebase for real-time tracking of walks. Google Maps helps show the walking route, and Firebase helps keep track of users' locations in real-time to make sure they're safe during their walk.
 - Cloud Hosting: AWS (EC2 for hosting, S3 for storage). This is where the platform will be stored and run. AWS will provide the servers and services needed to run the platform.
