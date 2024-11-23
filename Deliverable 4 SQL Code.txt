@@ -83,24 +83,17 @@ INSERT INTO address VALUES(1, 'Sunset Drive', 'Jump City', 'California', '12415'
 INSERT INTO address VALUES(2, 'Ocean Drive', 'Atlanta', 'Georgia', '21375', 'United States');
 INSERT INTO address VALUES(3, 'Belair Road', 'Baltimore', 'Maryland', '21242', 'United States');
 
+INSERT INTO Request_Status VALUES(1, 'Pending') ;
+INSERT INTO Request_Status VALUES(2, 'In Progress');
+INSERT INTO Request_Status VALUES(3, 'Completed');
+INSERT INTO Request_Status VALUES(4, 'Cancelled');
 
-INSERT INTO Request_Status (status_id, status_name) 
-VALUES 
-(1, 'Pending'),
-(2, 'In Progress'),
-(3, 'Completed'),
-(4, 'Cancelled');
+INSERT INTO Request VALUES(1, 1, 1, 1, '123 Main St', '456 Elm St', TO_TIMESTAMP('2024-11-15 14:30:00', 'YYYY-MM-DD HH24:MI:SS'), NULL, NULL);
+INSERT INTO Request VALUES(2, 2, 2, 2, '456 Elm St', '789 Oak St', TO_TIMESTAMP('2024-11-16 15:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-16 15:30:00', 'YYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO Request VALUES(3, 3, 3, 3, '789 Oak St', '123 Main St', TO_TIMESTAMP('2024-11-17 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-17 16:30:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-17 17:00:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-INSERT INTO Request (request_id, user_id, walker_id, status_id, pickup_location, destination_location, request_time, walk_start_time, walk_end_time) 
-VALUES 
-(1, 1, 1, 1, '123 Main St', '456 Elm St', TO_TIMESTAMP('2024-11-15 14:30:00', 'YYYY-MM-DD HH24:MI:SS'), NULL, NULL),
-(2, 2, 2, 2, '456 Elm St', '789 Oak St', TO_TIMESTAMP('2024-11-16 15:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-16 15:30:00', 'YYYY-MM-DD HH24:MI:SS'), NULL),
-(3, 3, 3, 3, '789 Oak St', '123 Main St', TO_TIMESTAMP('2024-11-17 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-17 16:30:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-17 17:00:00', 'YYYY-MM-DD HH24:MI:SS'));
-
-INSERT INTO Ratings (rating_id, rating_value, rating_date, user_id, walker_id) 
-VALUES 
-(1, 5, TO_DATE('2024-11-15', 'YYYY-MM-DD'), 1, 1),
-(2, 4, TO_DATE('2024-11-16', 'YYYY-MM-DD'), 2, 2),
-(3, 3, TO_DATE('2024-11-17', 'YYYY-MM-DD'), 3, 3);
+INSERT INTO Ratings VALUES(1, 5, TO_DATE('2024-11-15', 'YYYY-MM-DD'), 1, 1);
+INSERT INTO Ratings VALUES(2, 4, TO_DATE('2024-11-16', 'YYYY-MM-DD'), 2, 2);
+INSERT INTO Ratings VALUES(3, 3, TO_DATE('2024-11-17', 'YYYY-MM-DD'), 3, 3);
 
 
