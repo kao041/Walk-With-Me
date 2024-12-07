@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Walk With Me</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+    }
+
+    /* Top Navigation Bar */
+    .navbar {
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 24px;
+      transition: text-decoration 0.3s ease;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Page Styling */
+    .contact-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .contact-form button {
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #444;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+    }
+
+    .contact-info a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <a href="homepage.html">Walk With Me</a> <!-- Links back to homepage -->
+    </div>
+    <div>
+      <a href="profile.html">Profile</a>
+      <a href="walkers.html">Walkers</a>
+      <a href="admin.html">Admin</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login/Signup</a>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+    <form action="contact.php" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>If you need immediate assistance, please contact campus security:</p>
+      <p><strong>Campus Police Hotline: <a href="tel:+1234567890">+1 (234) 567-890</a></strong></p>
+    </div>
+  </div>
+</body>
+</html>
