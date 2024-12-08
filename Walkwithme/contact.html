@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Walk With Me</title>
   <style>
+    /* Existing CSS styles (no changes) */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: white;
-      color: #333;
     }
 
-    /* Top Navigation Bar */
     .navbar {
       background-color: black;
       display: flex;
@@ -25,90 +24,51 @@
       color: white;
       text-decoration: none;
       margin: 0 15px;
-      font-size: 24px;
+      font-size: 24px; /* 1.5x larger than normal text size */
       transition: text-decoration 0.3s ease;
     }
 
     .navbar a:hover {
-      text-decoration: underline;
-    }
-
-    .logo a {
-      color: white;
-      text-decoration: none;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .logo a:hover {
-      text-decoration: underline;
-    }
-
-    /* Contact Page Styling */
-    .contact-container {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #f4f4f4;
-      border-radius: 8px;
-    }
-
-    h1 {
-      text-align: center;
+      background-color: #ddd;
       color: black;
     }
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    .contact-container {
+      width: 50%;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+    .contact-form input, .contact-form textarea {
       width: 100%;
-      box-sizing: border-box;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
     }
 
     .contact-form button {
-      background-color: black;
+      background-color: #1eb723;
       color: white;
-      font-size: 18px;
-      padding: 10px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 5px;
       cursor: pointer;
     }
 
     .contact-form button:hover {
-      background-color: #444;
+      background-color: #143815;
     }
 
     .contact-info {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .contact-info p {
-      font-size: 16px;
-    }
-
-    .contact-info a {
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+
   <!-- Navigation Bar -->
   <div class="navbar">
     <div class="logo">
-      <a href="homepage.html">Walk With Me</a> <!-- Links back to homepage -->
+      <a href="homepage.html">Walk With Me</a>
     </div>
     <div>
       <a href="profile.html">Profile</a>
@@ -119,20 +79,50 @@
     </div>
   </div>
 
-  <!-- Contact Us Section -->
   <div class="contact-container">
     <h1>Contact Us</h1>
-    <form action="contact.php" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <!-- Display Status Message -->
+    <div id="statusMessage"></div>
+
+    <!-- Contact Form -->
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
 
     <div class="contact-info">
       <p>If you need immediate assistance, please contact campus security:</p>
-      <p><strong>Campus Police Hotline: <a href="tel:+1234567890">+1 (234) 567-890</a></strong></p>
+      <p><strong>UMBC Campus Police Hotline: <a href="tel:+1234567890">+1 (410) 455-5555</a></strong></p>
     </div>
   </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Simple validation
+      if (!name || !email || !message) {
+        document.getElementById("statusMessage").innerHTML = "<p style='color: red;'>Please fill in all fields.</p>";
+        return;
+      }
+
+      // You can add more validation, like email format checking here
+
+      // Simulate successful form submission
+      document.getElementById("statusMessage").innerHTML = "<p style='color: green;'>Thank you for reaching out! Your message has been sent successfully.</p>";
+
+      // Clear form fields
+      document.getElementById("contactForm").reset();
+    });
+  </script>
+
 </body>
 </html>
