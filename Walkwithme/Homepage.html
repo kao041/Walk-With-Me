@@ -67,6 +67,8 @@
       margin-top: auto; /* Pushes the content to the bottom */
       margin-left: 20px; /* Align content to the left */
       padding-bottom: 20px;
+      display: flex; /* Flex layout to align cards horizontally */
+      gap: 20px; /* Space between cards */
     }
 
     /* Suggestion Card */
@@ -76,14 +78,10 @@
       padding: 10px 20px;
       margin: 10px 0; /* Space between multiple cards */
       display: flex;
-      align-items: center;
-      justify-content: space-between; /* Align content and image */
+      flex-direction: column;
+      align-items: flex-start;
       width: fit-content; /* Card adjusts to content width */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .suggestion-content {
-      margin-right: 20px; /* Space between text and image */
     }
 
     .suggestion-content h3 {
@@ -113,11 +111,22 @@
       color: white;
     }
 
-    /* Image Styling */
-    .suggestion-image img {
-      width: 100px; /* Adjust size as needed */
+    /* Image Section on Right */
+    .homepage-image {
+      position: absolute;
+      top: 100px; /* Adjust positioning as needed */
+      right: 150px; /* Move it further to the left */
+      max-width: 800px; /* Increase size */
       height: auto;
-      border-radius: 10px;
+      border-radius: 10px; /* Optional rounded edges */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Extra Content Below Suggestions */
+    .extra-content {
+      margin-left: 20px; /* Align extra content to the left */
+      font-size: 18px;
+      padding-top: 10px;
     }
   </style>
 </head>
@@ -144,20 +153,43 @@
 
   <!-- Suggestions Section -->
   <div class="content">
-    <div class="subtitle">
-      Suggestions
+    <!-- Reserve Card -->
+    <div class="suggestion-card">
+      <div class="suggestion-content">
+        <h3>Reserve</h3>
+        <p>Reserve a walker in advance so you have less to worry.</p>
+        <a href="walkers.html" class="details-button">Details</a>
+      </div>
     </div>
+
+    <!-- Walker Card -->
     <div class="suggestion-card">
       <div class="suggestion-content">
         <h3>Walker</h3>
         <p>Feel safe on your walk. Request a walker, and go.</p>
         <a href="login.html" class="details-button">Details</a>
       </div>
-      <div class="suggestion-image">
-        <!-- Add your actual image file path here -->
-        <img src="walkerimage.jpg" alt="Walker Icon">
+    </div>
+
+    <!-- Your Walks Card -->
+    <div class="suggestion-card">
+      <div class="suggestion-content">
+        <h3>Your Walks</h3>
+        <p>See your metrics and all your past walks with us!</p>
+        <a href="profile.html" class="details-button">Details</a>
       </div>
     </div>
   </div>
+
+  <!-- Extra Content Below Suggestions -->
+  <div class="extra-content">
+    <p>Looking for more features? Stay tuned as we continue to expand Walk With Me to make campus safety even better.</p>
+    <p>Have feedback or suggestions? Reach out to us through our <a href="contact.html">Contact Page</a>.</p>
+  </div>
+
+  <!-- Right-Side Image -->
+  <img src="https://www.wlu.edu/assets/Admissions/banner-admissions-johnsonbrochure9-28-22-05-2.jpeg" 
+       alt="Campus Image" 
+       class="homepage-image">
 </body>
 </html>
