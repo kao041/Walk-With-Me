@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walker Profiles - Walk With Me</title>
+    <style>
+      body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+    }
+
+    /* Top Navigation Bar */
+    .navbar {
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 24px;
+      transition: text-decoration 0.3s ease;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo a:hover {
+      text-decoration: underline;
+    }
+
+    /* Walker Profile Section */
+    .profile-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content:  space-between;
+      margin: 30px auto;
+      padding: 20px;
+      width: 80%;
+      background-color:  #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-card img {
+      border-radius:  50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .profile-card .info {
+      flex: 1;
+    }
+
+    .profile-card .info h2 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .profile-card .info p {
+      font-size: 1rem;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    .profile-card .info .status {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: green;
+      margin-top: 15px;
+    }
+
+    .ratings span {
+      font-size: 1.2rem;
+      color: #FFD700;
+    }
+
+    .certifications {
+      margin-top: 20px;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .certifications h3 {
+      margin-top: 0;
+    }
+
+    .certifications ul li {
+      margin: 5px 0;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <a href="homepage.html">Walk With Me</a> <!-- Links back to homepage -->
+    </div>
+    <div>
+      <a href="profile.html">Profile</a>
+      <a href="walkers.html">Walkers</a>
+      <a href="admin.html">Admin</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login/Signup</a>
+    </div>
+  </div>
+
+  <!-- Walker Profile Section-->
+
+  <!-- Walker 1 -->
+  <div class="profile-card">
+    <div class="info">
+      <h2>Duke Dennis</h2>
+      <p>Experience walker with a passion for ensuring the safety and comfort for all users. Available for walks during the evening and late night hours. Duke ensures a positive experience for every walk with a high standard of care.</p>
+
+      <p class="status">Status: <span>Online</span></p>
+
+      <div class="ratings">
+        <p>Ratings: <span>⭐⭐⭐⭐⭐</span> (4.9/5 based on 120 reviews)</p>
+      </div>
+
+      <div class="certifications">
+        <h3>Certifications & Background</h3>
+        <ul>
+          <li>Certified Safety & First Aid Trained</li>
+          <li>Background Check Passed</li>
+          <li>5+ Years of Experience</li>
+        </ul>
+      </div>
+
+      <a href="Userdashboard.html">
+        <button class="request-btn">Request a Walker</button>
+      </a>
+    </div>
+   </div>
+
+   <!-- Walker 2 -->
+  <div class="profile-card">
+    <div class="info">
+      <h2>Jada Smith</h2>
+      <p>Dedicated walker with a love for helping others feel safe. Available for walks in the mornings and early afternoons. Jade has received excellent feedback for her professionalism and reliability.</p>
+      <p class="status">Status: <span>Offline</span></p>
+      <div class="ratings">
+        <p>Ratings: <span>⭐⭐⭐⭐⭐</span> (4.6/5 based on 85 reviews)</p>
+      </div>
+
+      <div class="certifications">
+        <h3>Certifications & Background</h3>
+        <ul>
+          <li>Certified in CPR & First Aid Trained</li>
+          <li>Passed Extensive Background Check</li>
+          <li>3+ Years of Experience</li>
+        </ul>
+      </div>
+
+      <a href="Userdashboard.html">
+        <button class="request-btn">Request a Walker</button>
+      </a>
+
+    </div>
+   </div>
+
+   <!-- Walker 3 -->
+  <div class="profile-card">
+    <div class="info">
+      <h2>Ryan Reynolds</h2>
+      <p>Experienced walker specializing in evening and night-time safety walks. Ryan has a calm and friendly approach, making every walk a comfortable experience.</p>
+
+      <p class="status">Status: <span>Online</span></p>
+
+      <div class="ratings">
+        <p>Ratings: <span>⭐⭐⭐⭐⭐</span> (4.5/5 based on 70 reviews)</p>
+      </div>
+
+      <div class="certifications">
+        <h3>Certifications & Background</h3>
+        <ul>
+          <li>Certified in Safety</li>
+          <li>Background Check Passed</li>
+          <li>4+ Years of Experience</li>
+        </ul>
+      </div>
+
+      <a href="Userdashboard.html">
+        <button class="request-btn">Request a Walker</button>
+      </a>
+    </div>
+   </div>
+
+   <!-- Walker 4 -->
+  <div class="profile-card">
+    <div class="info">
+      <h2>Samantha Lee</h2>
+      <p>Skilled and friendly walker available for daily morning and afternoon walks. Samantha is known for her punctuality and friendly demeanor, making her a top choice for regular walks.</p>
+      <p class="status">Status: <span>Online</span></p>
+      <div class="ratings">
+        <p>Ratings: <span>⭐⭐⭐⭐⭐</span> (4.3/5 based on 95 reviews)</p>
+      </div>
+
+      <div class="certifications">
+        <h3>Certifications & Background</h3>
+        <ul>
+          <li>Certified in First Aid </li>
+          <li>Background Check Passed</li>
+          <li>2+ Years of Experience</li>
+        </ul>
+      </div>
+
+      <a href="Userdashboard.html">
+        <button class="request-btn">Request a Walker</button>
+      </a>
+    </div>
+   </div>
+
+   <!-- Walker 5 -->
+  <div class="profile-card">
+    <div class="info">
+      <h2>Alex Morgan</h2>
+      <p>Enthusiastic walker available for weekend and evening walks. Alex is passionate about providing a safe environment for all, with many positive reviews from happy clients.</p>
+      <p class="status">Status: <span>Online</span></p>
+      <div class="ratings">
+        <p>Ratings: <span>⭐⭐⭐⭐⭐</span> (4.8/5 based on 110 reviews)</p>
+      </div>
+
+      <div class="certifications">
+        <h3>Certifications & Background</h3>
+        <ul>
+          <li>CPR Certified</li>
+          <li>Extensive Background Check Passed</li>
+          <li>6+ Years of Experience</li>
+        </ul>
+      </div>
+      <a href="Userdashboard.html">
+        <button class="request-btn">Request a Walker</button>
+      </a>
+    </div>
+   </div>
+
+
+   <div class="profile-footer">
+    <p>&copy 2024 Walk With Me. All Rights Reserved.</p>
+   </div>
+
+</body>
+</html>
+
