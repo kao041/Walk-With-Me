@@ -1,4 +1,13 @@
 -- WalkWithMe Database
+
+-- Drop the tables 
+drop table users cascade constraints;
+drop table walker cascade constraints;
+drop table address cascade constraints;
+drop table request_status cascade constraints;
+drop table ratings cascade constraints;
+drop table request cascade constraints;
+
 ﻿-- Create the Users table:
 CREATE TABLE Users (
     user_id INT PRIMARY KEY,
