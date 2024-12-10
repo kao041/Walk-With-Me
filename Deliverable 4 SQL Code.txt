@@ -103,4 +103,12 @@ INSERT INTO Ratings VALUES (2, 4.0, TO_DATE('2024-11-16', 'YYYY-MM-DD'), 2, 2);
 INSERT INTO Ratings VALUES (3, 3.0, TO_DATE('2024-11-17', 'YYYY-MM-DD'), 3, 3);
 
 
+select * from users;
+select * from address;
+select * from walker;
+select * from request_status;
+select * from ratings;
+select * from request;
+
+
 
